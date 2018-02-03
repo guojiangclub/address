@@ -62,9 +62,9 @@ class AddressTest extends \Orchestra\Testbench\TestCase
 
         $result = $this->repository->create($attributes);
 
-        $this->assertSame(\iBrand\Component\Address\Address::class, get_class($result));
+        $this->assertEquals(\iBrand\Component\Address\Address::class, get_class($result));
 
-        $this->assertSame(1, $result->is_default);
+        $this->assertEquals(1, $result->is_default);
 
         //1. test new default address, old address is not default.
         $attributes = ['user_id' => 1, 'accept_name' => '小陈子', 'mobile' => '18933336677', 'province' => 320000,
@@ -73,9 +73,9 @@ class AddressTest extends \Orchestra\Testbench\TestCase
         $result1 = $this->repository->create($attributes);
 
         $result = $this->repository->find($result->id);
-
-        $this->assertSame(0, $result->is_default);
-        $this->assertSame(1, $result1->is_default);
+        
+        $this->assertEquals(0, $result->is_default);
+        $this->assertEquals(1, $result1->is_default);
 
         //2. test user addresses
 
@@ -102,8 +102,8 @@ class AddressTest extends \Orchestra\Testbench\TestCase
 
         $default = $this->repository->getDefaultByUser(1);
 
-        $this->assertSame($result1->id, $default->id);
-        $this->assertSame(1, $default->is_default);
+        $this->assertEquals($result1->id, $default->id);
+        $this->assertEquals(1, $default->is_default);
 
         //test get user default from all is not default addresses.
         $attributes = ['user_id' => 2, 'accept_name' => '小李子', 'mobile' => '18933336666', 'province' => 320000,
@@ -118,8 +118,8 @@ class AddressTest extends \Orchestra\Testbench\TestCase
 
         $default = $this->repository->getDefaultByUser(2);
 
-        $this->assertSame($result->id, $default->id);
-        $this->assertSame(0, $default->is_default);
+        $this->assertEquals($result->id, $default->id);
+        $this->assertEquals(0, $default->is_default);
     }
 
     public function testUpdateByUser()
@@ -135,8 +135,8 @@ class AddressTest extends \Orchestra\Testbench\TestCase
 
         $result = $this->repository->updateByUser($attributes, $result->id, 1);
 
-        $this->assertSame('18933336661', $result->mobile);
-        $this->assertSame('小李子1', $result->accept_name);
+        $this->assertEquals('18933336661', $result->mobile);
+        $this->assertEquals('小李子1', $result->accept_name);
 
         //1. test update other user address.
 
