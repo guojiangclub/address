@@ -1,0 +1,54 @@
+{
+  "name": "ibrand/address",
+  "type": "library",
+  "description": "ibrand address component",
+  "keywords": [
+    "iBrand",
+    "Address",
+    "component"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "shjchen",
+      "email": "ibrand.shjchen@foxmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "prettus/l5-repository": "^2.1"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "~3.5",
+    "orchestra/database": "~3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "iBrand\\Component\\Address\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "iBrand\\Component\\Address\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "packagist": false
+    },
+    {
+      "type": "composer",
+      "url": "http://packagist.phpcomposer.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
