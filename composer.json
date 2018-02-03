@@ -36,19 +36,6 @@
       ]
     }
   },
-  "config": {
-    "preferred-install": "dist",
-    "secure-http": false
-  },
-  "repositories": [
-    {
-      "packagist": false
-    },
-    {
-      "type": "composer",
-      "url": "http://packagist.phpcomposer.com"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true
 }
