@@ -12,8 +12,7 @@
 namespace iBrand\Component\Address;
 
 /**
- * Class ServiceProvider
- * @package iBrand\Component\Address
+ * Class ServiceProvider.
  */
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

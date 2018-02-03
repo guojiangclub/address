@@ -14,8 +14,7 @@ namespace iBrand\Component\Address;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Address
- * @package iBrand\Component\Address
+ * Class Address.
  */
 class Address extends Model
 {

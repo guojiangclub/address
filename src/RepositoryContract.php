@@ -12,29 +12,31 @@
 namespace iBrand\Component\Address;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
+
 /**
- * Interface RepositoryContract
- * @package iBrand\Component\Address
+ * Interface RepositoryContract.
  */
 interface RepositoryContract extends RepositoryInterface
 {
     /**
      * @param $userId
+     *
      * @return mixed
      */
     public function getByUser($userId);
 
     /**
      * @param $userId
+     *
      * @return mixed
      */
     public function getDefaultByUser($userId);
-
 
     /**
      * @param array $attributes
      * @param $id
      * @param $userId
+     *
      * @return mixed
      */
     public function updateByUser(array $attributes, $id, $userId);

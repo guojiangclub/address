@@ -15,8 +15,7 @@ use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Traits\CacheableRepository;
 
 /**
- * Class Repository
- * @package iBrand\Component\Address
+ * Class Repository.
  */
 class Repository extends BaseRepository implements RepositoryContract
 {
@@ -34,6 +33,7 @@ class Repository extends BaseRepository implements RepositoryContract
 
     /**
      * @param array $attributes
+     *
      * @return mixed
      */
     public function create(array $attributes = [])
@@ -48,6 +48,7 @@ class Repository extends BaseRepository implements RepositoryContract
     /**
      * @param array $attributes
      * @param $id
+     *
      * @return mixed
      */
     public function update(array $attributes, $id)
@@ -72,6 +73,7 @@ class Repository extends BaseRepository implements RepositoryContract
 
     /**
      * @param $userId
+     *
      * @return mixed
      */
     public function getByUser($userId)
@@ -81,7 +83,6 @@ class Repository extends BaseRepository implements RepositoryContract
 
     /**
      * @param $userId
-     * @return null
      */
     public function getDefaultByUser($userId)
     {
@@ -102,11 +103,11 @@ class Repository extends BaseRepository implements RepositoryContract
         return $default;
     }
 
-
     /**
      * @param array $attributes
      * @param $id
      * @param $userId
+     *
      * @return mixed
      */
     public function updateByUser(array $attributes, $id, $userId)
